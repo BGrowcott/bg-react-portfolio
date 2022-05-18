@@ -5,40 +5,55 @@ import $ from "jquery";
 import "../styles/Portfolio.css";
 
 function Portfolio() {
-  let [startPoint, setStartPoint] = useState(0)
-  const [initialWorks, setWorks] = useState(workArray.slice(startPoint, startPoint + 3));
+  let [startPoint, setStartPoint] = useState(0);
+  const [initialWorks, setWorks] = useState(
+    workArray.slice(startPoint, startPoint + 3)
+  );
 
-  function nextWorks () {
-      setStartPoint(startPoint += 3)
-      setWorks(workArray.slice(startPoint, startPoint + 3))
+  function nextWorks() {
+    setStartPoint((startPoint += 3));
+    setWorks(workArray.slice(startPoint, startPoint + 3));
   }
 
-  function previousWorks () {
-    setStartPoint(startPoint -= 3)
-    setWorks(workArray.slice(startPoint, startPoint + 3))
+  function previousWorks() {
+    setStartPoint((startPoint -= 3));
+    setWorks(workArray.slice(startPoint, startPoint + 3));
   }
 
   return (
-    <div id="myWorkContainer">
-      <button className="workNav" id="workNavLeft" onClick={previousWorks} disabled={(startPoint === 0)}>
-        left
-      </button>
+    <section>
+      <h1 id="portfolio">Portfolio</h1>
+      <div id="myWorkContainer">
+        <button
+          className="workNav"
+          id="workNavLeft"
+          onClick={previousWorks}
+          disabled={startPoint === 0}
+        >
+          Previous
+        </button>
 
-      <div id="myWork">
-        {initialWorks.map((work) => parse(work.renderHtml()))}
+        <div id="myWork">
+          {initialWorks.map((work) => parse(work.renderHtml()))}
+        </div>
+
+        <button
+          className="workNav"
+          id="workNavRight"
+          onClick={nextWorks}
+          disabled={startPoint === workArray.length - 3}
+        >
+          Next
+        </button>
       </div>
-
-      <button className="workNav" id="workNavRight" onClick={nextWorks} disabled={(startPoint === workArray.length - 3)}>
-        right
-      </button>
-    </div>
+    </section>
   );
 }
 
 const videos = $(".video");
 
 for (let i = 0; i < videos.length; i++) {
-  $(videos[i]).click(()=>console.log('clicked!'));
+  $(videos[i]).click(() => console.log("clicked!"));
   $(videos[i]).mouseover(playVideo);
   $(videos[i]).mouseout(pauseVideo);
 }

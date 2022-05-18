@@ -3,6 +3,7 @@ import quizVideo from "./images/quizvideo.mp4";
 import sunOrShowersVid from "./images/sunorshowersvideo.mp4";
 import gmtbVideo from "./images/gmtbvideo.mp4";
 import bootcampersVideo from "./images/bootcampersvideo.mp4"
+import jateVideo from './images/jatevideo.mp4'
 
 class WorkCard {
   constructor(title, description, videoFile, gitUrl, deployedUrl) {
@@ -28,8 +29,8 @@ class WorkCard {
           </main>
           <div>
             <p>${this.description}</p>
-            <a href="${this.gitUrl}" target="_blank"><button class="linkButton">Github</button></a>
-            <a href="${this.deployedUrl}" target="_blank"><button class="linkButton">Deployed App</button></a>
+            <a href="${this.gitUrl}" target="_blank"><button class="btn btn-primary">Github</button></a>
+            <a href="${this.deployedUrl}" target="_blank"><button class="btn btn-primary">Deployed App</button></a>
           </div>
           <footer></footer>
         </div>
@@ -74,11 +75,11 @@ const workArray = [
     "https://pascal-project.herokuapp.com/"
   ),
   new WorkCard(
-    "Sun or Showers",
-    "A Weather app - search any city worldwide for a 5 day forecast - uses OpenWeather API",
-    sunOrShowersVid,
-    "https://github.com/BGrowcott/bg-sun-or-showers",
-    "https://bgrowcott.github.io/bg-sun-or-showers/"
+    "Just Another Text Editor",
+    "This Progressive Web Application (PWA) is a text editor that runs in the browser.",
+    jateVideo,
+    "https://github.com/BGrowcott/text-editing-is-fun",
+    "https://text-editing-is-fun.herokuapp.com/"
   ),
 ];
 

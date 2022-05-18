@@ -7,7 +7,6 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
-        padding: '80px 0px'
     },
     paragraph: {
         width: '40%'
@@ -25,7 +24,7 @@ const styles = {
 
 function AboutMe () {
     return (
-        <section style={styles.container}>
+        <section id='aboutMe' style={styles.container}>
            <p style={styles.paragraph}>
                <span>Hi </span>
                I'm a full stack developer currently based in Birmingham and working as

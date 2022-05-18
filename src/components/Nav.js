@@ -1,19 +1,36 @@
 import React from 'react';
+import $ from "jquery";
 
-function NavBar () {
+const noMargin = {
+    margin: '0px'
+}
+
+const aboutMeStyle = {
+    backgroundColor: 'white', 
+    color: 'black'
+}
+
+function NavBar ({setPage}) {
+
+    function navSelect (e) {
+        $('li').css({'background-color': 'black', 'color': 'white'})
+        $(e.target).css({'background-color': 'white', 'color': 'black'})
+        setPage(e.target.dataset.page)
+    }
+
     return (
         <div>
-            <ul>
-                <li>
+            <ul style={noMargin}>
+                <li id='name'>
                     Ben Growcott
                 </li>
-                <li>
-                    About Me
+                <li data-page='about' style={aboutMeStyle} onClick={navSelect}>
+                   About Me
                 </li>
-                <li>
-                    Portfolio
+                <li data-page='portfolio' onClick={navSelect}>
+                   Portfolio
                 </li>
-                <li>
+                <li data-page='contact' onClick={navSelect}>
                     Contact
                 </li>
                 <li>
