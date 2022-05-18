@@ -1,0 +1,96 @@
+#myWorkContainer{
+    /* background-image: url('../images/background2.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    align-items: center;
+    height: 700px;
+}
+
+.workNav{
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#workNavLeft{
+    left: 20px;
+}
+
+#workNavRight{
+    right: 20px;
+}
+
+#myWork{
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+}
+
+.workCard{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 5px;
+    border: 2px solid black;
+    background-color: white;
+    transition: 0.5s all;
+    box-shadow: 0px 0px 5px #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.workCard div {
+    margin-top: auto;
+    text-align: center;
+}
+
+.workCard header {
+    position: relative;
+    bottom: 15px;
+    font-size: larger;
+    background-color: rgb(48, 44, 44);
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgb(36, 36, 39);
+}
+
+.linkButton {
+    padding: 5px;
+    margin: 5px 5%;
+    cursor: pointer;
+    background-color: #27ad4f;
+    border-radius: 10px;
+}
+
+.linkButton:hover {
+    background-color: #37d666;
+}
+
+.linkButton:active {
+    box-shadow: 0px 0px 10px inset darkgreen;
+}
+
+video{
+    opacity: 0.5;
+    transition: 0.5s all;
+}
+
+video:hover {
+    opacity: 1;
+}
+
+
+.workCard:hover{
+    box-shadow: 10px 10px 10px #3f3f3f;
+    width: 100%;
+
+}
+
+.video{
+    width: 100%;
+}
