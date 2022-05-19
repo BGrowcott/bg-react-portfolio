@@ -8,7 +8,6 @@ const formContainerStyle = {
 function Contact() {
   return (    
     <section className="formContainer" style={formContainerStyle}>
-      <h2>Contact</h2>
       <form>
       <div className="form-group">
           <label htmlFor="nameInput">Name</label>

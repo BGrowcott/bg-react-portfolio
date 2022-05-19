@@ -5,3 +5,10 @@ body {
 section {
     padding: 120px 0px 50px;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}

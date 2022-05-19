@@ -1,5 +1,5 @@
 import React from "react";
-import gitHubLogo from '../images/GitHub-Mark-64px.png'
+import gitHubLogo from '../images/GitHub-Mark-Light-64px.png'
 import linkedInLogo from '../images/LI-In-Bug.png'
 import stackLogo from '../images/768px-Stack_Overflow_icon.png'
 import '../styles/Footer.css'
@@ -8,7 +8,9 @@ const footerStyle = {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
-    margin: '50px 0px 0px'
+    margin: '50px 0px 0px',
+    backgroundColor: 'black',
+    padding: '5px'
 }
 
 function Footer () {

@@ -26,6 +26,7 @@ li {
 
 #name {
     text-decoration: none;
+    cursor: default;
 }
 
 

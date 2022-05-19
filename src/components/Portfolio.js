@@ -3,6 +3,8 @@ import { workArray } from "../workcardClass";
 import parse from "html-react-parser";
 import $ from "jquery";
 import "../styles/Portfolio.css";
+import rightArrow from '../images/right-arrow.png'
+import leftArrow from '../images/left-arrow.png'
 
 function Portfolio() {
   let [startPoint, setStartPoint] = useState(0);
@@ -22,15 +24,14 @@ function Portfolio() {
 
   return (
     <section>
-      <h1 id="portfolio">Portfolio</h1>
       <div id="myWorkContainer">
         <button
-          className="workNav"
+          className="workNav btn"
           id="workNavLeft"
           onClick={previousWorks}
           disabled={startPoint === 0}
         >
-          Previous
+          <img src={leftArrow}/>
         </button>
 
         <div id="myWork">
@@ -38,12 +39,12 @@ function Portfolio() {
         </div>
 
         <button
-          className="workNav"
+          className="btn workNav"
           id="workNavRight"
           onClick={nextWorks}
           disabled={startPoint === workArray.length - 3}
         >
-          Next
+          <img src={rightArrow}/>
         </button>
       </div>
     </section>

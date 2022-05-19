@@ -17,16 +17,16 @@ class WorkCard {
     return `
         <div class="workCard">
           <header>
-            <h3>${this.title}</h3>
+            ${this.title}
           </header>
-          <main>
+          <div>
             <video
               class="video"
               src=${this.videoFile}
               type="video/mp4"
               muted
             ></video>
-          </main>
+          </div>
           <div>
             <p>${this.description}</p>
             <a href="${this.gitUrl}" target="_blank"><button class="btn btn-primary">Github</button></a>
@@ -69,7 +69,7 @@ const workArray = [
   ),
   new WorkCard(
     "Bootcampers Alumni",
-    "This is a space for current and former coding Bootcampers to come together and share ideas, support, job opportunities and life. A user can log in, create a profile, browse and create forums and converse with other students and alumni.",
+    "This is a space for current and former coding Bootcampers to come together and share ideas, support, job opportunities and life.",
     bootcampersVideo,
     "https://github.com/BGrowcott/team-pascal-project",
     "https://pascal-project.herokuapp.com/"
