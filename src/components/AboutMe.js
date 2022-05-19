@@ -9,7 +9,12 @@ const styles = {
         alignItems: 'center',
     },
     paragraph: {
-        width: '40%'
+        width: '40%',
+        boxShadow: 'inset 0px 0px 10px black',
+        padding: '25px',
+        borderRadius: '15px',
+        fontSize: 'larger',
+        backgroundColor: 'whitesmoke',
     },
     backGroundImage: {
         width: '200px',
@@ -18,7 +23,8 @@ const styles = {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        borderRadius: '100px'
+        borderRadius: '100px',
+        boxShadow: 'inset 0px 0px 10px black',
     }
 }
 
