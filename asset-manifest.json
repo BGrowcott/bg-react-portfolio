@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bg-react-portfolio/static/css/main.d6eef5e8.css",
+    "main.js": "/bg-react-portfolio/static/js/main.03e8cb5e.js",
+    "static/js/787.bfbc8c67.chunk.js": "/bg-react-portfolio/static/js/787.bfbc8c67.chunk.js",
+    "static/media/bootcampersvideo.mp4": "/bg-react-portfolio/static/media/bootcampersvideo.b4fde1625a254fc8e25b.mp4",
+    "static/media/sunorshowersvideo.mp4": "/bg-react-portfolio/static/media/sunorshowersvideo.bf6f401357fc46025622.mp4",
+    "static/media/babvideo.mp4": "/bg-react-portfolio/static/media/babvideo.8f89281f29fd27e6db73.mp4",
+    "static/media/gmtbvideo.mp4": "/bg-react-portfolio/static/media/gmtbvideo.104cec4cbbe3d484d879.mp4",
+    "static/media/IMG-2174.jpg": "/bg-react-portfolio/static/media/IMG-2174.821c35a1cf3af9591be4.jpg",
+    "static/media/quizvideo.mp4": "/bg-react-portfolio/static/media/quizvideo.0b579345f33b76898832.mp4",
+    "static/media/jatevideo.mp4": "/bg-react-portfolio/static/media/jatevideo.1885f5aa25fe55836d9e.mp4",
+    "static/media/768px-Stack_Overflow_icon.png": "/bg-react-portfolio/static/media/768px-Stack_Overflow_icon.0123b8df35f2e7d20bc8.png",
+    "index.html": "/bg-react-portfolio/index.html",
+    "main.d6eef5e8.css.map": "/bg-react-portfolio/static/css/main.d6eef5e8.css.map",
+    "main.03e8cb5e.js.map": "/bg-react-portfolio/static/js/main.03e8cb5e.js.map",
+    "787.bfbc8c67.chunk.js.map": "/bg-react-portfolio/static/js/787.bfbc8c67.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6eef5e8.css",
+    "static/js/main.03e8cb5e.js"
+  ]
+}
