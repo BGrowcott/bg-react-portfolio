@@ -22,6 +22,8 @@ li {
     text-decoration: underline;
     cursor: pointer;
     transition: 1s;
+    font-family: 'Odibee Sans', cursive;
+    font-size: larger;
 }
 
 #name {

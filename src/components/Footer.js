@@ -8,7 +8,6 @@ const footerStyle = {
     display: 'flex',
     justifyContent: 'space-around',
     alignItems: 'center',
-    margin: '50px 0px 0px',
     backgroundColor: 'black',
     padding: '5px'
 }

@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Pacifico&display=swap");
+
+
 body {
     margin: 0px;
+    font-size: 20px;
 }
 
 section {
     padding: 120px 0px 50px;
+    animation-name: slidein;
+    animation-duration: 1.5s;
 }
 
 main {
@@ -12,3 +18,13 @@ main {
     justify-content: space-between;
     height: 100vh;
 }
+
+@keyframes slidein {
+    from {
+      transform: translateX(-200%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
