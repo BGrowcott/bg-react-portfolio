@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import $ from "jquery";
 import download from "../images/download.png";
+import hamburger from "../images/menu.png"
 import cv from "../images/CV2022.pdf";
 
 const styles = {
@@ -30,9 +31,23 @@ function NavBar({ setPage }) {
     setPage(e.target.dataset.page);
   }
 
+  const [isMenuDisplayed, setMenu] = useState(false)
+
+  function menuToggle () {
+    if (!isMenuDisplayed) {
+        $('#navList').css({'display': 'flex', 'flex-direction': 'column'})
+        setMenu(true)
+    }
+    else {
+        $('#navList').css({'display': 'none', 'flex-direction': 'row'})
+        setMenu(false)
+    }
+  }
+
   return (
     <div>
-      <ul style={styles.noMargin}>
+      <img id='menu' src={hamburger} onClick={menuToggle}/>
+      <ul id='navList' style={styles.noMargin}>
         <li id="name" style={styles.nameFont}>Ben Growcott</li>
         <li data-page="about" style={styles.aboutMeStyle} onClick={navSelect}>
           About Me

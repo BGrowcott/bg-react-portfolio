@@ -7,6 +7,13 @@
     opacity: 0.98;
 }
 
+#menu {
+    display: none;
+    width: 48px;
+    margin: auto;
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     display: flex;
@@ -14,6 +21,7 @@ ul {
     align-items: center;
     margin: 0px;
     font-size: 20px;
+    transition: 1s;
 }
 
 li {
@@ -29,6 +37,22 @@ li {
 #name {
     text-decoration: none;
     cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    #name {
+        display:none
+    }
+}
+
+@media screen and (max-width: 481px) {
+    #menu {
+        display: block
+    }
+    ul {
+        padding: 0px;
+        display: none;
+    }
 }
 
 

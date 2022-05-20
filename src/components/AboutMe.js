@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from '../images/IMG-2174.jpg'
+import '../styles/About.css'
 
 
 const styles = {
@@ -14,20 +15,19 @@ const styles = {
         alignItems: 'center',
     },
     paragraph: {
-        width: '40%',
         boxShadow: 'inset 0px 0px 10px black',
         padding: '25px',
         borderRadius: '15px',
         backgroundColor: 'whitesmoke',
     },
     backGroundImage: {
-        width: '200px',
-        height: '200px',
+        width: '300px',
+        height: '300px',
         backgroundImage: `url(${Photo})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        borderRadius: '100px',
+        borderRadius: '150px',
         boxShadow: 'inset 0px 0px 10px black',
     }
 }
