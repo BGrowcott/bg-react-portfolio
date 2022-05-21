@@ -33,6 +33,7 @@ const styles = {
 }
 
 function AboutMe () {
+
     return (
         <section id='aboutMe' style={styles.container}>
            <p style={styles.paragraph}>

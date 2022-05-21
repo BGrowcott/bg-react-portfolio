@@ -32,11 +32,20 @@ li {
     transition: 1s;
     font-family: 'Odibee Sans', cursive;
     font-size: larger;
+    transition: 0.5s;
+}
+
+li:hover {
+    background-color: rgb(53, 53, 53);
 }
 
 #name {
     text-decoration: none;
     cursor: default;
+}
+
+#navList-small {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {

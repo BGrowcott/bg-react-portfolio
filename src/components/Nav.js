@@ -29,17 +29,19 @@ function NavBar({ setPage }) {
     $("li").css({ "background-color": "black", "color": "white", 'transform': 'none' });
     $(e.target).css({ "background-color": "white", color: "black", "transform": "rotate(360deg)" });
     setPage(e.target.dataset.page);
+    $('#navList-small').css({'display': 'none', 'flex-direction': 'row'})
+    setMenu(false)
   }
 
   const [isMenuDisplayed, setMenu] = useState(false)
 
   function menuToggle () {
     if (!isMenuDisplayed) {
-        $('#navList').css({'display': 'flex', 'flex-direction': 'column'})
+        $('#navList-small').css({'display': 'flex', 'flex-direction': 'column'})
         setMenu(true)
     }
     else {
-        $('#navList').css({'display': 'none', 'flex-direction': 'row'})
+        $('#navList-small').css({'display': 'none', 'flex-direction': 'row'})
         setMenu(false)
     }
   }
@@ -65,6 +67,24 @@ function NavBar({ setPage }) {
           </a>
         </li>
       </ul>
+      <ul id='navList-small' style={styles.noMargin}>
+        <li data-page="about" style={styles.aboutMeStyle} onClick={navSelect}>
+          About Me
+        </li>
+        <li data-page="portfolio" onClick={navSelect}>
+          Portfolio
+        </li>
+        <li data-page="contact" onClick={navSelect}>
+          Contact
+        </li>
+        <li>
+          <a style={styles.downloadLink} href={cv} download>
+            CV
+            <img style={styles.downloadIcon} src={download} />
+          </a>
+        </li>
+      </ul>
+
     </div>
   );
 }

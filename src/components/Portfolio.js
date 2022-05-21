@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import $ from 'jquery'
 import "../styles/Portfolio.css";
 import rightArrow from "../images/right-arrow.png";
 import leftArrow from "../images/left-arrow.png";
@@ -70,13 +71,21 @@ function Portfolio() {
   );
 
   function nextWorks() {
+    $('#myWork').css({'opacity': '0', 'transition': 'all 0.5s'})
+    setTimeout(()=>{
     setStartPoint((startPoint += 3));
     setWorks(workArray.slice(startPoint, startPoint + 3));
+    $('#myWork').css({'opacity': '1', 'transition': 'all 0.5s'})
+   }, 1000)
   }
 
   function previousWorks() {
+    $('#myWork').css({'opacity': '0', 'transition': 'all 0.5s'})
+    setTimeout(()=>{
     setStartPoint((startPoint -= 3));
     setWorks(workArray.slice(startPoint, startPoint + 3));
+    $('#myWork').css({'opacity': '1', 'transition': 'all 0.5s'})
+   }, 1000)
   }
 
   return (
