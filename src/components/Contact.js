@@ -21,7 +21,7 @@ function Contact() {
 
   function focusLost(e) {
     if (e.target.value === "") {
-      setMessage("This is a required field");
+      setMessage("*This is a required field");
       $(e.target).css('background-color', '#ff00002e')
     }
     if (e.target.type === "email") {
@@ -60,18 +60,17 @@ function Contact() {
     <section className="formContainer" style={styles.formContainerStyle}>
       <form>
         <div className="form-group">
-          <label htmlFor="nameInput">Name</label>
+          <label htmlFor="nameInput">Name*</label>
           <input
             type="text"
             className="form-control"
             id="nameInput"
-            placeholder="Your Name"
             onBlur={focusLost}
             onChange={removeMessage}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="emailInput">Email address:</label>
+          <label htmlFor="emailInput">Email address*</label>
           <input
             type="email"
             className="form-control"
@@ -82,7 +81,7 @@ function Contact() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="messageInput">Message:</label>
+          <label htmlFor="messageInput">Message*</label>
           <textarea
             onBlur={focusLost}
             onChange={removeMessage}
