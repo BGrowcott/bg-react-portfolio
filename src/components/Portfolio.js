@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import $ from 'jquery'
 import "../styles/Portfolio.css";
 import rightArrow from "../images/right-arrow.png";
@@ -10,6 +10,7 @@ import sunOrShowersVid from "../images/sunorshowersvideo.mp4";
 import gmtbVideo from "../images/gmtbvideo.mp4";
 import bootcampersVideo from "../images/bootcampersvideo.mp4";
 import jateVideo from "../images/jatevideo.mp4";
+import { useMediaQuery } from "react-responsive";
 
 // Work array
 const workArray = [
@@ -63,29 +64,59 @@ const workArray = [
   },
 ];
 
+
+
 function Portfolio() {
 
+  let [increments, setIncrements] = useState(3)
   let [startPoint, setStartPoint] = useState(0);
   const [initialWorks, setWorks] = useState(
-    workArray.slice(startPoint, startPoint + 3)
+    workArray.slice(startPoint, startPoint + increments)
   );
 
+  const isSmallScreen = useMediaQuery({query: '(max-width: 768px)'})
+
+  // let [isSmallScreen, setSmallScreen] = useState(false)
+
+  // window.addEventListener('resize', ()=> {
+  //   if (window.innerWidth < 768) {
+  //     setSmallScreen(true)
+  //     setIncrements(1)
+  //     setWorks(workArray.slice(startPoint, startPoint + increments));
+  //   }
+  //   else if (window.innerWidth > 768) {
+  //     setSmallScreen(false)
+  //     setIncrements(3)
+  //     setWorks(workArray.slice(startPoint, startPoint + increments));
+  //   }
+  // })
+
+  useEffect(() => {
+    if (isSmallScreen) {
+      console.log('test')
+      setIncrements(1) 
+      setWorks(workArray.slice(startPoint, startPoint + increments))
+    }
+  }, [increments])
+
   function nextWorks() {
+    if (isSmallScreen) {setIncrements(1)} else {setIncrements(3)}
     $('#myWork').css({'opacity': '0', 'transition': 'all 0.5s'})
     setTimeout(()=>{
-    setStartPoint((startPoint += 3));
-    setWorks(workArray.slice(startPoint, startPoint + 3));
+    setStartPoint((startPoint += increments));
+    setWorks(workArray.slice(startPoint, startPoint + increments));
     $('#myWork').css({'opacity': '1', 'transition': 'all 0.5s'})
-   }, 1000)
+   }, 500)
   }
 
   function previousWorks() {
-    $('#myWork').css({'opacity': '0', 'transition': 'all 0.5s'})
+    if (isSmallScreen) {setIncrements(1)} else {setIncrements(3)}
+    $('#myWork').css({'opacity': '0', 'transition': 'all 0.5s linear'})
     setTimeout(()=>{
-    setStartPoint((startPoint -= 3));
-    setWorks(workArray.slice(startPoint, startPoint + 3));
-    $('#myWork').css({'opacity': '1', 'transition': 'all 0.5s'})
-   }, 1000)
+    setStartPoint((startPoint -= increments));
+    setWorks(workArray.slice(startPoint, startPoint + increments));
+    $('#myWork').css({'opacity': '1', 'transition': 'all 0.5s linear'})
+   }, 500)
   }
 
   return (
@@ -117,7 +148,7 @@ function Portfolio() {
           className="btn workNav"
           id="workNavRight"
           onClick={nextWorks}
-          disabled={startPoint === workArray.length - 3}
+          disabled={startPoint === workArray.length - increments}
         >
           <img src={rightArrow} />
         </button>
