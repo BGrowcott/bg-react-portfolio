@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import $ from 'jquery'
 import "../styles/Portfolio.css";
 import rightArrow from "../images/right-arrow.png";
@@ -14,30 +14,6 @@ import { useMediaQuery } from "react-responsive";
 
 // Work array
 const workArray = [
-  {
-    title: "JavaScript Quiz",
-    description:
-      "Short, fun quiz on the fundamentals of JavaScript. Powered by JavaScript.",
-    videoFile: quizVideo,
-    gitUrl: "https://github.com/BGrowcott/bg-magical-js-quiz",
-    deployedUrl: "https://bgrowcott.github.io/bg-magical-js-quiz/",
-  },
-  {
-    title: "Birmingham Association Banquets",
-    description:
-      "Restaurant finder application - search any city or postcode to find nearby restaurants.",
-    videoFile: babVideo,
-    gitUrl: "https://github.com/oli-drew/bab-group-project-by-slackware",
-    deployedUrl: "https://oli-drew.github.io/bab-group-project-by-slackware/",
-  },
-  {
-    title: "Sun or Showers",
-    description:
-      "A Weather app - search any city worldwide for a 5 day forecast - uses OpenWeather API",
-    videoFile: sunOrShowersVid,
-    gitUrl: "https://github.com/BGrowcott/bg-sun-or-showers",
-    deployedUrl: "https://bgrowcott.github.io/bg-sun-or-showers/",
-  },
   {
     title: "Gunz, Money & Tech Blogs",
     description:
@@ -62,6 +38,30 @@ const workArray = [
     gitUrl: "https://github.com/BGrowcott/text-editing-is-fun",
     deployedUrl: "https://text-editing-is-fun.herokuapp.com/",
   },
+  {
+    title: "JavaScript Quiz",
+    description:
+      "Short, fun quiz on the fundamentals of JavaScript. Powered by JavaScript.",
+    videoFile: quizVideo,
+    gitUrl: "https://github.com/BGrowcott/bg-magical-js-quiz",
+    deployedUrl: "https://bgrowcott.github.io/bg-magical-js-quiz/",
+  },
+  {
+    title: "Birmingham Association Banquets",
+    description:
+      "Restaurant finder application - search any city or postcode to find nearby restaurants.",
+    videoFile: babVideo,
+    gitUrl: "https://github.com/oli-drew/bab-group-project-by-slackware",
+    deployedUrl: "https://oli-drew.github.io/bab-group-project-by-slackware/",
+  },
+  {
+    title: "Sun or Showers",
+    description:
+      "A Weather app - search any city worldwide for a 5 day forecast - uses OpenWeather API",
+    videoFile: sunOrShowersVid,
+    gitUrl: "https://github.com/BGrowcott/bg-sun-or-showers",
+    deployedUrl: "https://bgrowcott.github.io/bg-sun-or-showers/",
+  },
 ];
 
 
@@ -75,21 +75,6 @@ function Portfolio() {
   );
 
   const isSmallScreen = useMediaQuery({query: '(max-width: 768px)'})
-
-  // let [isSmallScreen, setSmallScreen] = useState(false)
-
-  // window.addEventListener('resize', ()=> {
-  //   if (window.innerWidth < 768) {
-  //     setSmallScreen(true)
-  //     setIncrements(1)
-  //     setWorks(workArray.slice(startPoint, startPoint + increments));
-  //   }
-  //   else if (window.innerWidth > 768) {
-  //     setSmallScreen(false)
-  //     setIncrements(3)
-  //     setWorks(workArray.slice(startPoint, startPoint + increments));
-  //   }
-  // })
 
   useEffect(() => {
     if (isSmallScreen) {
