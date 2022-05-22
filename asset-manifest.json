@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bg-react-portfolio/static/css/main.eb8617c4.css",
-    "main.js": "/bg-react-portfolio/static/js/main.c61ec4b4.js",
+    "main.css": "/bg-react-portfolio/static/css/main.e5ca1721.css",
+    "main.js": "/bg-react-portfolio/static/js/main.588fbd25.js",
     "static/js/787.bfbc8c67.chunk.js": "/bg-react-portfolio/static/js/787.bfbc8c67.chunk.js",
     "static/media/bootcampersvideo.mp4": "/bg-react-portfolio/static/media/bootcampersvideo.b4fde1625a254fc8e25b.mp4",
     "static/media/sunorshowersvideo.mp4": "/bg-react-portfolio/static/media/sunorshowersvideo.bf6f401357fc46025622.mp4",
@@ -13,12 +13,12 @@
     "static/media/CV2022.pdf": "/bg-react-portfolio/static/media/CV2022.2066927f64a1740b0c4c.pdf",
     "static/media/768px-Stack_Overflow_icon.png": "/bg-react-portfolio/static/media/768px-Stack_Overflow_icon.0123b8df35f2e7d20bc8.png",
     "index.html": "/bg-react-portfolio/index.html",
-    "main.eb8617c4.css.map": "/bg-react-portfolio/static/css/main.eb8617c4.css.map",
-    "main.c61ec4b4.js.map": "/bg-react-portfolio/static/js/main.c61ec4b4.js.map",
+    "main.e5ca1721.css.map": "/bg-react-portfolio/static/css/main.e5ca1721.css.map",
+    "main.588fbd25.js.map": "/bg-react-portfolio/static/js/main.588fbd25.js.map",
     "787.bfbc8c67.chunk.js.map": "/bg-react-portfolio/static/js/787.bfbc8c67.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb8617c4.css",
-    "static/js/main.c61ec4b4.js"
+    "static/css/main.e5ca1721.css",
+    "static/js/main.588fbd25.js"
   ]
 }
